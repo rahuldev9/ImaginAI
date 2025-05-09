@@ -24,15 +24,17 @@ Geni AI is an AI-powered web application that allows users to generate images fr
 - npm or yarn
 - Hugging Face API key
 
-### Installation
-
-```bash
-git clone https://github.com/yourusername/geni-ai-app.git
-cd geni-ai-app
-
 ## 📸 Usage Screenshots
 
 ### 🎨 Image Generated from Prompt
 
 ![Generated Image](assets/usage-screenshot1.png)
 ![Generated Image](assets/usage-screenshot2.png)
+
+### Installation
+
+```bash
+git clone https://github.com/yourusername/geni-ai-app.git
+cd geni-ai-app
+
+
