@@ -27,5 +27,5 @@ Geni AI is an AI-powered web application that allows users to generate images fr
 ### Installation
 
 ```bash
-git clone https://github.com/rahuldev9/geni-ai-app.git
+git clone https://github.com/username/geni-ai-app.git
 cd geni-ai-app
