@@ -15,7 +15,6 @@ Geni AI is an AI-powered web application that allows users to generate images fr
 - **Backend**: Node.js (Express)
 - **AI Integration**: Hugging Face Transformers and Diffusers
 - **Voice Recognition**: Web Speech API or integrated STT (Speech-to-Text) from Hugging Face
-- **Deployment**: (Optional) Docker, Vercel, or Heroku
 
 ## 🚀 Getting Started
 
