@@ -11,8 +11,7 @@ const app = express();
 const PORT = 5000;
 
 const HF_API_TOKEN = process.env.HF_API_TOKEN;
-// const HF_IMAGE_MODEL = 'stabilityai/stable-diffusion-xl-base-1.0';
-// const HF_TRANSCRIBE_MODEL = 'openai/whisper-large-v3';
+
 const HF_TRANSCRIBE_MODEL =  process.env.HF_TRANSCRIBE_MODEL;
 const HF_IMAGE_MODEL = process.env.HF_IMAGE_MODEL;
 app.use(cors());
