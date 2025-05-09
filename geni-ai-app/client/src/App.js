@@ -7,6 +7,7 @@ import SoundRecorder from "./Components/SoundRecorder";
 import { MdOutlineRecordVoiceOver, MdRecordVoiceOver } from "react-icons/md";
 import FullScreenLoader from "./Components/FullScreenLoader";
 import Navbar from "./Components/Navbar";
+import Popup from "./Components/Popup";
 
 const App = () => {
   const [prompt, setPrompt] = useState("");
@@ -81,7 +82,8 @@ const App = () => {
       }
     } catch (error) {
       console.error("Error generating image:", error);
-      setError("Failed to generate image.");
+      
+      setError(error)
     } finally {
       setLoading(false);
     }
@@ -91,6 +93,7 @@ const App = () => {
     setImage("");
     setPrompt("");
     setError("");
+    setAudioURL(null)
   };
 
   const handleSubmit = async (audioBlobFile) => {
@@ -111,6 +114,7 @@ const App = () => {
       setLoader(false);
     } catch (error) {
       console.error("Translation failed:", error);
+      setError(error)
 
       alert("Failed to translate the audio.");
     } finally {
@@ -149,9 +153,9 @@ const App = () => {
             }`}
           />
 
-          {error && <p className="text-red-500 mb-2">{error}</p>}
+{error && <Popup error={error} onClose={() => setError(null)} />}
           <div className="flex justify-between gap-4 flex-wrap">
-            {/* Clear Button */}
+          
             <div className="flex flex-row gap-2 flex-wrap">
               <button
                 onClick={clearImage}
