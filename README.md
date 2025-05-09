@@ -28,7 +28,7 @@ Geni AI is an AI-powered web application that allows users to generate images fr
 
 ### 🎨 Image Generated from Prompt
 
-
+![Generated Image](assets/usage-screenshot1.png)
 ![Generated Image](assets/usage-screenshot2.png)
 
 ### Installation
