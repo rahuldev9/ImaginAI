@@ -8,7 +8,6 @@ import { MdOutlineRecordVoiceOver, MdRecordVoiceOver } from "react-icons/md";
 import FullScreenLoader from "./Components/FullScreenLoader";
 import Navbar from "./Components/Navbar";
 
-
 const App = () => {
   const [prompt, setPrompt] = useState("");
   const [image, setImage] = useState("");
@@ -71,7 +70,7 @@ const App = () => {
     setImage(""); 
     try {
       const response = await axios.post(
-        "http://localhost:5000/generate-image",
+        `${process.env.REACT_APP_API}/generate-image`,
         { prompt }
       );
       const imageUrl = response?.data?.imageUrl;
@@ -100,7 +99,7 @@ const App = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/transcribe-and-translate",
+        `${process.env.REACT_APP_API}/transcribe-and-translate`,
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -167,11 +166,12 @@ const App = () => {
               </button>
               <div
                 onClick={isRecording ? stopRecording : startRecording}
-                className={`px-4 py-2 text-white rounded-lg transition ${
+                className={`px-4 py-2 text-white rounded-lg transition  ${
                   isRecording
                     ? "bg-red-600 hover:bg-red-700"
                     : "bg-green-600 hover:bg-green-700"
                 }`}
+                
               >
                 {isRecording ? (
                   <MdRecordVoiceOver />
